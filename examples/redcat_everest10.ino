@@ -19,14 +19,19 @@ void setup() {
 }
 
 void loop() {
+    // forward, backward movement
     car->throttle(100); // full speed ahead
     car->throttle(0);   // full reverse
     car->throttle(50);  // stop
-    delay(100);
+
+    // turning
+    car->turn(80);      // turn 10 degrees left
+    car->turn(100);     // turn 10 degrees right
 
     // move and turn
     car->move(85, 90);  // forward 85%, center steer
     car->move(85, 80);  // forward 85%, turning left 10 degrees
     car->move(85, 100); // forward 85%, turning right 10 degrees
-}
 
+    delay(100);
+}
