@@ -4,7 +4,7 @@ Redcat2C *car;
 
 void setup() {
     car = new Redcat2C(9, 10);  // connect motor to pin 9, steer to pin 10
-    motor.arm();                // arms the ESC, will wait for 3s
+    car->arm();                // arms the ESC, will wait for 3s
 
     delay(1000);
 
